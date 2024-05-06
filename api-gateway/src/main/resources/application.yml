@@ -1,0 +1,20 @@
+spring:
+  application:
+    name:
+      API_GATEWAY
+server:
+  port:
+    8765
+
+  cloud:
+    gateway:
+      routes:
+        - id: quiz-service
+          uri: http://localhost:8090/quiz-service
+          predicates:
+            - Path=/api/quiz/**
+
+
+springdoc:
+  swagger-ui:
+    configUrl: "/swagger-config.json"

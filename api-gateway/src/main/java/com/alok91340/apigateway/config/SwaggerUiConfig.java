@@ -20,17 +20,5 @@ public class SwaggerUiConfig {
 
     @Autowired
     private DiscoveryClient discoveryClient;
-//
-//    @GetMapping("/swagger-config.json")
-//    public Map<String, Object> swaggerConfig() {
-//        Map<String, Object> config = new LinkedHashMap<>();
-//        List<AbstractSwaggerUiConfigProperties.SwaggerUrl> urls = new LinkedList<>();
-//        this.discoveryClient.getServices().forEach(serviceName ->
-//                this.discoveryClient.getInstances(serviceName).forEach(serviceInstance ->
-//                        urls.add(new AbstractSwaggerUiConfigProperties.SwaggerUrl(serviceName, serviceInstance.getUri() + "/v3/api-docs"))
-//                )
-//        );
-//        config.put("urls", urls);
-//        return config;
-//    }
+
 }
